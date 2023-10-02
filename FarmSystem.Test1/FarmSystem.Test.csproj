@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>FarmSystem.Test1</RootNamespace>
     <AssemblyName>FarmSystem.Test1</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -51,12 +51,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cow.cs" />
+    <Compile Include="Animals\FarmAnimal.cs" />
+    <Compile Include="Animals\Cow.cs" />
+    <Compile Include="Animals\IAnimal.cs" />
     <Compile Include="EmydexFarmSystem.cs" />
-    <Compile Include="Horse.cs" />
+    <Compile Include="Animals\Horse.cs" />
     <Compile Include="IMilkableAnimal.cs" />
-    <Compile Include="Sheep.cs" />
-    <Compile Include="Hen.cs" />
+    <Compile Include="Animals\Sheep.cs" />
+    <Compile Include="Animals\Hen.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
