@@ -1,6 +1,7 @@
 ﻿using FarmSystem.Test1.Animals;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FarmSystem.Test1
 {
@@ -21,7 +22,8 @@ namespace FarmSystem.Test1
         public void MakeNoise()
         {
             //Test 2 : Modify this method to make the animals talk
-            Console.WriteLine("There are no animals in the farm");
+            if (!_heldAnimals.Any()) Console.WriteLine("There are no animals in the farm");
+            else foreach (var animal in _heldAnimals) animal.Talk();
         }
 
         //TEST 3
