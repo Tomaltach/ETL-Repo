@@ -9,7 +9,7 @@ namespace FarmSystem.Test1
         {
             Excercise1();
             Excercise2();
-            //Excercise3();
+            Excercise3();
             //Excercise4();
             Console.ReadKey();
         }
