@@ -7,9 +7,10 @@ namespace FarmSystem.Test1.Animals
     {
         public Guid Id { get; set; } = Guid.NewGuid();
         public abstract string Animal { get; }
+        public abstract string Noise { get; }
         public abstract int NoOfLegs { get; }
 
-        public abstract void Talk();
+        public void Talk() => Console.WriteLine($"{Animal} says {Noise}!");
         public void Run() => Console.WriteLine($"{Animal} is running");
         public void Walk() => Console.WriteLine($"{Animal} is walking");
     }

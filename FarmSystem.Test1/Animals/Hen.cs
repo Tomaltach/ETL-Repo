@@ -1,12 +1,9 @@
-﻿using System;
-
-namespace FarmSystem.Test1.Animals
+﻿namespace FarmSystem.Test1.Animals
 {
     public class Hen : FarmAnimal
     {
         public override string Animal => "Hen";
+        public override string Noise => "CLUCKAAAAAWWWWK";
         public override int NoOfLegs => 2;
-
-        public override void Talk() => Console.WriteLine($"{Animal} says CLUCKAAAAAWWWWK!");
     }
 }
