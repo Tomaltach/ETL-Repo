@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FarmSystem.Test1.Animals
+namespace FarmSystem.Test1.Interfaces
 {
     public interface IAnimal
     {

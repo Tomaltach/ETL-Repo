@@ -1,5 +1,5 @@
 ﻿using FarmSystem.Test1.Animals;
-using FarmSystem.Test2;
+using FarmSystem.Test2.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;

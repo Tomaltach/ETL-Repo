@@ -1,4 +1,4 @@
-﻿using FarmSystem.Test2;
+﻿using FarmSystem.Test2.Interfaces;
 using System;
 
 namespace FarmSystem.Test1.Animals
