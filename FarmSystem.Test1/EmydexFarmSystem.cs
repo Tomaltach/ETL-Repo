@@ -8,14 +8,17 @@ namespace FarmSystem.Test1
 {
     public class EmydexFarmSystem
     {
-        private readonly IList<FarmAnimal> _heldAnimals = new List<FarmAnimal>();
+        private readonly Queue<FarmAnimal> _heldAnimals = new Queue<FarmAnimal>();
+
+        public delegate void EventHandler(object sender, EventArgs args);
+        public event EventHandler FarmEmpty = delegate { };
 
         //TEST 1
         public void Enter(FarmAnimal animal)
         {
             //TODO Modify the code so that we can display the type of animal (cow, sheep etc) 
             //Hold all the animals so it is available for future activities
-            _heldAnimals.Add(animal);
+            _heldAnimals.Enqueue(animal);
             Console.WriteLine($"{animal.Animal} has entered the Emydex farm");
         }
      
@@ -47,7 +50,13 @@ namespace FarmSystem.Test1
         //TEST 4
         public void ReleaseAllAnimals()
         {
-           Console.WriteLine("There are still animals in the farm, farm is not free");
+            if (!_heldAnimals.Any()) return;
+            while (_heldAnimals.Count > 0)
+            {
+                var animal = _heldAnimals.Dequeue();
+                Console.WriteLine($"{animal.Animal} has left the farm");
+            }
+            FarmEmpty(this, new EventArgs());
         }
     }
 }

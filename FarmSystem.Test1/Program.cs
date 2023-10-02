@@ -10,7 +10,7 @@ namespace FarmSystem.Test1
             Excercise1();
             Excercise2();
             Excercise3();
-            //Excercise4();
+            Excercise4();
             Console.ReadKey();
         }
 
@@ -141,6 +141,7 @@ Emydex Farm is now empty
             Console.WriteLine("\nExercise 4: Press any key to free all animals");
             Console.ReadKey();
             var farm = new EmydexFarmSystem();
+            farm.FarmEmpty += (sender, args) => { Console.WriteLine("Emydex farm is now empty"); };
             Cow cow = new Cow();
             farm.Enter(cow);
 
