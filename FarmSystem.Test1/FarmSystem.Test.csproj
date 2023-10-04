@@ -51,9 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalFactory.cs" />
     <Compile Include="Animals\FarmAnimal.cs" />
     <Compile Include="Animals\Cow.cs" />
     <Compile Include="Animals\MilkingAnimal.cs" />
+    <Compile Include="Enum\AnimalEnum.cs" />
     <Compile Include="Interfaces\IAnimal.cs" />
     <Compile Include="EmydexFarmSystem.cs" />
     <Compile Include="Animals\Horse.cs" />

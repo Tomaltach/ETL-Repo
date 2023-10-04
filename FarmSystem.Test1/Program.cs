@@ -1,4 +1,4 @@
-﻿using FarmSystem.Test1.Animals;
+﻿using FarmSystem.Test1.Enum;
 using System;
 
 namespace FarmSystem.Test1
@@ -27,16 +27,17 @@ Sheep has entered the farm
             Console.WriteLine("Exercise 1 : Press any key when it is time to open the Farm to animals");
             Console.ReadKey();
             var farm = new EmydexFarmSystem();
-            Cow cow = new Cow();
+
+            var cow = AnimalFactory.GetAnimal(AnimalEnum.Cow);
             farm.Enter(cow);
 
-            Hen hen = new Hen();
+            var hen = AnimalFactory.GetAnimal(AnimalEnum.Hen);
             farm.Enter(hen);
 
-            Horse horse = new Horse();
+            var horse = AnimalFactory.GetAnimal(AnimalEnum.Horse);
             farm.Enter(horse);
 
-            Sheep sheep = new Sheep();
+            var sheep = AnimalFactory.GetAnimal(AnimalEnum.Sheep);
             farm.Enter(sheep);
             Console.ReadKey();
         }
@@ -63,18 +64,19 @@ Sheep has entered the farm
             Console.WriteLine("\nExercise 2 : Press any key to scare the animals in the farm");
             Console.ReadKey();
             var farm = new EmydexFarmSystem();
-            Cow cow = new Cow();
+
+            var cow = AnimalFactory.GetAnimal(AnimalEnum.Cow);
             farm.Enter(cow);
 
-            Hen hen = new Hen();
+            var hen = AnimalFactory.GetAnimal(AnimalEnum.Hen);
             farm.Enter(hen);
 
-            Horse horse = new Horse();
+            var horse = AnimalFactory.GetAnimal(AnimalEnum.Horse);
             farm.Enter(horse);
 
-            Sheep sheep = new Sheep();
+            var sheep = AnimalFactory.GetAnimal(AnimalEnum.Sheep);
             farm.Enter(sheep);
-            
+
             farm.MakeNoise();
             Console.ReadKey();
         }
@@ -100,16 +102,17 @@ Cow was milked!
             Console.WriteLine("\nExercise 3 : Press any key when it is time to milk animals");
             Console.ReadKey();
             var farm = new EmydexFarmSystem();
-            Cow cow = new Cow();
+
+            var cow = AnimalFactory.GetAnimal(AnimalEnum.Cow);
             farm.Enter(cow);
 
-            Hen hen = new Hen();
+            var hen = AnimalFactory.GetAnimal(AnimalEnum.Hen);
             farm.Enter(hen);
 
-            Horse horse = new Horse();
+            var horse = AnimalFactory.GetAnimal(AnimalEnum.Horse);
             farm.Enter(horse);
 
-            Sheep sheep = new Sheep();
+            var sheep = AnimalFactory.GetAnimal(AnimalEnum.Sheep);
             farm.Enter(sheep);
 
             farm.MilkAnimals();
@@ -142,16 +145,17 @@ Emydex Farm is now empty
             Console.ReadKey();
             var farm = new EmydexFarmSystem();
             farm.FarmEmpty += (sender, args) => { Console.WriteLine("Emydex farm is now empty"); };
-            Cow cow = new Cow();
+
+            var cow = AnimalFactory.GetAnimal(AnimalEnum.Cow);
             farm.Enter(cow);
 
-            Hen hen = new Hen();
+            var hen = AnimalFactory.GetAnimal(AnimalEnum.Hen);
             farm.Enter(hen);
 
-            Horse horse = new Horse();
+            var horse = AnimalFactory.GetAnimal(AnimalEnum.Horse);
             farm.Enter(horse);
 
-            Sheep sheep = new Sheep();
+            var sheep = AnimalFactory.GetAnimal(AnimalEnum.Sheep);
             farm.Enter(sheep);
 
             farm.ReleaseAllAnimals();
